@@ -17,10 +17,16 @@ namespace BrickBreaker
         float imageX;
         float imageY;
         List<Brick> bricks;
+        List<List<Brick>> levelBricks;
 
         Texture2D paddleImg;
         Paddle paddle;
         KeyboardState state;
+
+        //Ball
+        Ball ball;
+        Texture2D ballImg;
+
 
         public Game1()
         {
@@ -52,10 +58,11 @@ namespace BrickBreaker
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            image = Content.Load<Texture2D>("rect");
-            imageX = image.Width * 0.05f;
-            //imageY = image.Height * 0.5f;
+            image = Content.Load<Texture2D>("brick");
+            imageX = image.Width * 0.2f;
+            imageY = image.Height * 0.2f;
             bricks = new List<Brick>();
+            levelBricks = new List<List<Brick>>();
             //bricks.Add(new Brick(image, Vector2.Zero, Color.White));
             generateBricks();
 
@@ -63,6 +70,15 @@ namespace BrickBreaker
             paddle = new Paddle(paddleImg, new Vector2(0, GraphicsDevice.Viewport.Height - (paddleImg.Height * 0.2f)), Color.White)
             {
                 Scale = new Vector2(0.2f)
+            };
+
+            //Ball
+            ballImg = Content.Load<Texture2D>("premierBall");
+            ball = new Ball(ballImg,
+                new Vector2(GraphicsDevice.Viewport.Width / 2 - ((ballImg.Width / 2) * 0.05f), GraphicsDevice.Viewport.Height / 2 - ((ballImg.Height / 2) * 0.05f)),
+                Color.White)
+            {
+                Scale = new Vector2(0.05f)
             };
         }
 
@@ -87,8 +103,19 @@ namespace BrickBreaker
 
             // TODO: Add your update logic here
             state = Keyboard.GetState();
-            paddle.Update(state, GraphicsDevice.Viewport.Width);
 
+            if (!ball.NewBall)
+            {
+                paddle.Update(state, GraphicsDevice.Viewport.Width);
+                ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle);
+            }
+            else if(ball.NewBall)
+            {
+                if (state.IsKeyDown(Keys.Space))
+                {
+                    ball.NewBall = false;
+                }
+            }
             base.Update(gameTime);
         }
 
@@ -104,6 +131,7 @@ namespace BrickBreaker
             spriteBatch.Begin();
             drawBricks();
             paddle.Draw(spriteBatch);
+            ball.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -119,15 +147,27 @@ namespace BrickBreaker
             //        bricks.Add(new Brick(image, position, tint));
             //    }
             //}
-
-            for (int i = 2; i < GraphicsDevice.Viewport.Width; i += (int)imageX + 4)
+            float heightLevel = 10;
+            Color tint = Color.White;
+            //need to look at sprite sheets
+            for (int level = 0; level < 3; level++)
             {
-                if (i < GraphicsDevice.Viewport.Width - imageX)
+                for (int i = 2; i < GraphicsDevice.Viewport.Width; i += (int)imageX + 4)
                 {
-                    Vector2 position = new Vector2(i, 10);
-                    Color tint = Color.White;
-                    bricks.Add(new Brick(image, position, tint));
+                    if (i < GraphicsDevice.Viewport.Width - imageX)
+                    {
+                        Vector2 position = new Vector2(i, heightLevel);
+                        bricks.Add(new Brick(image, position, tint));
+                    }
                 }
+               
+                if(level == 0)
+                {
+                    tint = Color.DarkGreen;
+                }
+
+                heightLevel += imageY + 10;
+                levelBricks.Add(bricks);
             }
         }
 
@@ -135,7 +175,7 @@ namespace BrickBreaker
         {
             for (int i = 0; i < bricks.Count; i++)
             {
-                bricks[i].Scale = new Vector2(0.05f);
+                bricks[i].Scale = new Vector2(0.2f);
                 bricks[i].Draw(spriteBatch);
 
             }
