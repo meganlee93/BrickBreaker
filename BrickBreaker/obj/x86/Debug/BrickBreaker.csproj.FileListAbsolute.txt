@@ -1,0 +1,62 @@
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\legoBrick.xnb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.exe
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.pdb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csprojResolveAssemblyReference.cache
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CoreCompileInputs.cache
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.exe
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.pdb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\blueRect.xnb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\greenBrick.xnb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\rect.xnb
+c:\users\visitorrl1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\paddle.xnb
+C:\Users\VisitorRL1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\premierBall.xnb
+C:\Users\VisitorRL1\source\repos\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\brick.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\blueRect.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\brick.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\gBrick.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\greenBrick.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\legoBrick.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\paddle.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\premierBall.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\rect.xnb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.exe
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.pdb
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csprojAssemblyReference.cache
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CoreCompileInputs.cache
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CopyComplete
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.exe
+C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.pdb
