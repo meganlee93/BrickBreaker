@@ -4,16 +4,20 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/legoBrick.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/blueRect.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/greenBrick.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/rect.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/paddle.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/premierBall.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/brick.png</File>
-    <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/gBrick.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/14-Breakout-Tiles.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/blueRect.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/brick.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/gBrick.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/greenBrick.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/legoBrick.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/paddle.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/premierBall.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/rect.png</File>
+    <File>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/SpriteFont1.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File>yBrick.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -18,6 +18,7 @@ namespace BrickBreaker
         float imageY;
         List<Brick> bricks;
         List<List<Brick>> levelBricks;
+        string[] brickColor = new string[3];
 
         Texture2D paddleImg;
         Paddle paddle;
@@ -26,6 +27,14 @@ namespace BrickBreaker
         //Ball
         Ball ball;
         Texture2D ballImg;
+        bool hit;
+
+        //Font
+        SpriteFont font;
+        string score;
+        Vector2 fontSize;
+        int playerScore;
+
 
 
         public Game1()
@@ -58,16 +67,19 @@ namespace BrickBreaker
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            image = Content.Load<Texture2D>("brick");
+
+            brickColor[0] = "brick";
+            brickColor[1] = "gBrick";
+            brickColor[2] = "yBrick";
+            image = Content.Load<Texture2D>(brickColor[0]);
             imageX = image.Width * 0.2f;
             imageY = image.Height * 0.2f;
             bricks = new List<Brick>();
             levelBricks = new List<List<Brick>>();
-            //bricks.Add(new Brick(image, Vector2.Zero, Color.White));
-            generateBricks();
+
 
             paddleImg = Content.Load<Texture2D>("paddle");
-            paddle = new Paddle(paddleImg, new Vector2(0, GraphicsDevice.Viewport.Height - (paddleImg.Height * 0.2f)), Color.White)
+            paddle = new Paddle(paddleImg, new Vector2(GraphicsDevice.Viewport.Width/2 - (paddleImg.Width * 0.2f)/2, GraphicsDevice.Viewport.Height - (paddleImg.Height * 0.2f)), Color.White)
             {
                 Scale = new Vector2(0.2f)
             };
@@ -80,6 +92,15 @@ namespace BrickBreaker
             {
                 Scale = new Vector2(0.05f)
             };
+
+            playerScore = 0;
+            score = "Score: " + playerScore;
+            font = Content.Load<SpriteFont>("SpriteFont1");
+            fontSize = font.MeasureString(score);
+
+            hit = false;
+
+            generateBricks();
         }
 
         /// <summary>
@@ -103,11 +124,39 @@ namespace BrickBreaker
 
             // TODO: Add your update logic here
             state = Keyboard.GetState();
+            fontSize = font.MeasureString(score);
 
             if (!ball.NewBall)
             {
                 paddle.Update(state, GraphicsDevice.Viewport.Width);
                 ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle);
+                //for(int i = 0; i < levelBricks.Count; i++)
+                //{
+                //    for(int j = 0; j < levelBricks[i].Count; j++)
+                //    {
+                //        ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle, levelBricks[i][j]);
+                //    }
+                //}
+
+                //fixing getting rid of bricks
+                for(int i = 0; i < levelBricks.Count; i++)
+                {
+                    for(int j = 0; j < levelBricks[i].Count; j++)
+                    {
+                        if(ball.CheckCollision(levelBricks[i][j]))
+                        {
+                            hit = true;
+                            levelBricks[i].Remove(levelBricks[i][j]);
+                            break;
+                        }
+                    }
+
+                    if(hit)
+                    {
+                        hit = false;
+                        break;
+                    }
+                }
             }
             else if(ball.NewBall)
             {
@@ -129,6 +178,8 @@ namespace BrickBreaker
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
+
+            spriteBatch.DrawString(font, score, Vector2.Zero, Color.White);
             drawBricks();
             paddle.Draw(spriteBatch);
             ball.Draw(spriteBatch);
@@ -138,20 +189,11 @@ namespace BrickBreaker
 
         public void generateBricks()
         {
-            //for(float i = 0; i < GraphicsDevice.Viewport.Height; i+= imageX + 10)
-            //{
-            //    for(float j = 0; j < GraphicsDevice.Viewport.Width; j += imageY + 5)
-            //    {
-            //        Vector2 position = new Vector2(i, j);
-            //        Color tint = Color.White;
-            //        bricks.Add(new Brick(image, position, tint));
-            //    }
-            //}
-            float heightLevel = 10;
+            float heightLevel = fontSize.Y + 10;
             Color tint = Color.White;
-            //need to look at sprite sheets
             for (int level = 0; level < 3; level++)
             {
+                image = Content.Load<Texture2D>(brickColor[level]);
                 for (int i = 2; i < GraphicsDevice.Viewport.Width; i += (int)imageX + 4)
                 {
                     if (i < GraphicsDevice.Viewport.Width - imageX)
@@ -159,11 +201,6 @@ namespace BrickBreaker
                         Vector2 position = new Vector2(i, heightLevel);
                         bricks.Add(new Brick(image, position, tint));
                     }
-                }
-               
-                if(level == 0)
-                {
-                    tint = Color.DarkGreen;
                 }
 
                 heightLevel += imageY + 10;

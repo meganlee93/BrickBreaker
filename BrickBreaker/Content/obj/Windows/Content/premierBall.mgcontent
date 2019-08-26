@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/premierBall.png</SourceFile>
-  <SourceTime>2019-08-25T14:08:31.3471458-07:00</SourceTime>
-  <DestFile>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/bin/Windows/Content/premierBall.xnb</DestFile>
-  <DestTime>2019-08-25T14:09:25.5818227-07:00</DestTime>
+  <SourceFile>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/premierBall.png</SourceFile>
+  <SourceTime>2019-08-25T16:41:40.9434167-07:00</SourceTime>
+  <DestFile>Z:/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/bin/Windows/Content/premierBall.xnb</DestFile>
+  <DestTime>2019-08-25T16:42:29.0151374-07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T08:35:54-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

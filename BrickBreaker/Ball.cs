@@ -46,10 +46,31 @@ namespace BrickBreaker
                 Position.Y = height / 2 - (Image.Height / 2 * Scale.Y);
                 NewBall = true;
             }
-            else if(Position.Y < 0)
+
+            //brick collison
+            //else if(Position.Y < brick.Position.Y + (brick.Image.Height * brick.Scale.Y))
+            //{
+            //    ySpeed = Math.Abs(ySpeed);
+            //}
+        }
+
+        public bool CheckCollision(Brick brick)
+        {
+            if(Position.Y < brick.Position.Y + (brick.Image.Height * brick.Scale.Y))
             {
-                ySpeed = Math.Abs(ySpeed);
+                if(ySpeed == Math.Abs(ySpeed))
+                {
+                    ySpeed = -Math.Abs(ySpeed);
+                }
+
+                else
+                {
+                    ySpeed = Math.Abs(ySpeed);
+                }
+                return true;
             }
+
+            return false;
         }
     }
 }

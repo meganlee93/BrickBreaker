@@ -18,14 +18,15 @@ namespace BrickBreaker
 
         public void Update(KeyboardState state, int width)
         {
+            //Need to accelerate
             if(state.IsKeyDown(Keys.Left) && Position.X > 0)
             {
-                Position.X -= 5;
+                Position.X -= 8;
             }
 
             else if(state.IsKeyDown(Keys.Right) && Position.X + (Image.Width * Scale.X) < width)
             {
-                Position.X += 5;
+                Position.X += 8;
             }
         }
     }

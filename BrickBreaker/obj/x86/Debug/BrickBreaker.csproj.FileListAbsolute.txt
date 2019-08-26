@@ -60,3 +60,36 @@ C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBrea
 C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CopyComplete
 C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.exe
 C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.pdb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\blueRect.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\brick.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\gBrick.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\greenBrick.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\legoBrick.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\paddle.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\premierBall.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\rect.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.exe
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\BrickBreaker.pdb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.dll
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\MonoGame.Framework.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\SharpDX.XInput.xml
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csprojAssemblyReference.cache
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CoreCompileInputs.cache
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.csproj.CopyComplete
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.exe
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.pdb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\yBrick.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\SpriteFont1.xnb
