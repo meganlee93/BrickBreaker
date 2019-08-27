@@ -35,7 +35,11 @@ namespace BrickBreaker
         Vector2 fontSize;
         int playerScore;
 
+        string lives;
+        Vector2 liveSize;
+        int numOfLives;
 
+        Texture2D pixel;
 
         public Game1()
         {
@@ -67,6 +71,9 @@ namespace BrickBreaker
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            pixel = new Texture2D(GraphicsDevice, 1, 1);
+            pixel.SetData(new Color[] { Color.White });
 
             brickColor[0] = "brick";
             brickColor[1] = "gBrick";
@@ -100,6 +107,10 @@ namespace BrickBreaker
 
             hit = false;
 
+            numOfLives = 3;
+            lives = "Lives: " + numOfLives;
+            liveSize = font.MeasureString(lives);
+
             generateBricks();
         }
 
@@ -124,19 +135,15 @@ namespace BrickBreaker
 
             // TODO: Add your update logic here
             state = Keyboard.GetState();
+            score = "Score: " + playerScore;
             fontSize = font.MeasureString(score);
+
+            lives = "Lives: " + numOfLives;
 
             if (!ball.NewBall)
             {
                 paddle.Update(state, GraphicsDevice.Viewport.Width);
                 ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle);
-                //for(int i = 0; i < levelBricks.Count; i++)
-                //{
-                //    for(int j = 0; j < levelBricks[i].Count; j++)
-                //    {
-                //        ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle, levelBricks[i][j]);
-                //    }
-                //}
 
                 //fixing getting rid of bricks
                 for(int i = 0; i < levelBricks.Count; i++)
@@ -147,6 +154,7 @@ namespace BrickBreaker
                         {
                             hit = true;
                             levelBricks[i].Remove(levelBricks[i][j]);
+                            playerScore++;
                             break;
                         }
                     }
@@ -162,6 +170,7 @@ namespace BrickBreaker
             {
                 if (state.IsKeyDown(Keys.Space))
                 {
+                    numOfLives--;
                     ball.NewBall = false;
                 }
             }
@@ -178,11 +187,14 @@ namespace BrickBreaker
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-
+            //GraphicsDevice.Viewport.Width - liveSize.
             spriteBatch.DrawString(font, score, Vector2.Zero, Color.White);
+            spriteBatch.DrawString(font, lives, new Vector2(GraphicsDevice.Viewport.Width - liveSize.X, 0), Color.White);
             drawBricks();
             paddle.Draw(spriteBatch);
             ball.Draw(spriteBatch);
+            //spriteBatch.Draw(pixel, levelBricks[0][0].Hitbox, new Color(Color.Blue, 100));
+            //spriteBatch.Draw(pixel, ball.Hitbox, new Color(Color.Red, 100));
             spriteBatch.End();
             base.Draw(gameTime);
         }
