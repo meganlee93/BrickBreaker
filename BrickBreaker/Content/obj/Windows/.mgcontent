@@ -4,6 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>//GMRDC1/Folder Redirection/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/gameFont.spritefont</File>
     <File>//GMRDC1/Folder Redirection/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/SpriteFont1.spritefont</File>
     <File>//GMRDC1/Folder Redirection/megan.lee/Documents/GitHub/BrickBreaker/BrickBreaker/Content/14-Breakout-Tiles.png</File>
     <File>C:/Users/VisitorRL8/Documents/Visual Studio 2017/Projects/BrickBreaker/BrickBreaker/Content/legoBrick.png</File>

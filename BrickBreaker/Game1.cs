@@ -16,7 +16,6 @@ namespace BrickBreaker
         Texture2D image;
         float imageX;
         float imageY;
-        List<Brick> bricks;
         List<List<Brick>> levelBricks;
         string[] brickColor = new string[3];
 
@@ -39,7 +38,16 @@ namespace BrickBreaker
         Vector2 liveSize;
         int numOfLives;
 
+        //Useful for drawing hitboxes
         Texture2D pixel;
+
+        Player player;
+        bool gameOver;
+
+        SpriteFont endGameFont;
+        string gameMessage;
+        Vector2 gameFontSize;
+
 
         public Game1()
         {
@@ -81,7 +89,7 @@ namespace BrickBreaker
             image = Content.Load<Texture2D>(brickColor[0]);
             imageX = image.Width * 0.2f;
             imageY = image.Height * 0.2f;
-            bricks = new List<Brick>();
+            //bricks = new List<Brick>();
             levelBricks = new List<List<Brick>>();
 
 
@@ -101,16 +109,22 @@ namespace BrickBreaker
             };
 
             playerScore = 0;
-            score = "Score: " + playerScore;
+            numOfLives = 3;
+            player = new Player(numOfLives, playerScore);
+
+            score = "Score: " + player.Score;
             font = Content.Load<SpriteFont>("SpriteFont1");
             fontSize = font.MeasureString(score);
 
             hit = false;
-
-            numOfLives = 3;
-            lives = "Lives: " + numOfLives;
+            
+            lives = "Lives: " + player.Lives;
             liveSize = font.MeasureString(lives);
 
+            gameOver = false;
+
+            endGameFont = Content.Load<SpriteFont>("gameFont");
+            gameMessage = "";
             generateBricks();
         }
 
@@ -135,43 +149,98 @@ namespace BrickBreaker
 
             // TODO: Add your update logic here
             state = Keyboard.GetState();
-            score = "Score: " + playerScore;
+            score = "Score: " + player.Score;
+            //score = "Count:" + levelBricks.Count;
             fontSize = font.MeasureString(score);
 
-            lives = "Lives: " + numOfLives;
-
-            if (!ball.NewBall)
+            lives = "Lives: " + player.Lives;
+            if (player.Lives > 0 && !gameOver)
             {
-                paddle.Update(state, GraphicsDevice.Viewport.Width);
-                ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle);
-
-                //fixing getting rid of bricks
-                for(int i = 0; i < levelBricks.Count; i++)
+                if (!ball.NewBall)
                 {
-                    for(int j = 0; j < levelBricks[i].Count; j++)
+                    paddle.Update(state, GraphicsDevice.Viewport.Width);
+                    ball.Update(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle, player);
+
+                    for (int i = 0; i < levelBricks.Count; i++)
                     {
-                        if(ball.CheckCollision(levelBricks[i][j]))
+                        for (int j = 0; j < levelBricks[i].Count; j++)
                         {
-                            hit = true;
-                            levelBricks[i].Remove(levelBricks[i][j]);
-                            playerScore++;
+                            if (ball.CheckCollision(levelBricks[i][j]))
+                            {
+                                hit = true;
+                                levelBricks[i].Remove(levelBricks[i][j]);
+                                player.Score++;
+                                break;
+                            }
+
+                            //score = "Count: " + levelBricks.Count + "Smaller: " + levelBricks[i].Count;
+                        }
+
+                        if (levelBricks[i].Count == 0)
+                        {
+                            levelBricks.Remove(levelBricks[i]);
+                        }
+
+                        if (hit)
+                        {
+                            hit = false;
                             break;
+                        }
+
+                        if(levelBricks.Count == 0)
+                        {
+                            levelBricks.Remove(levelBricks[i]);
                         }
                     }
 
-                    if(hit)
+                    if(levelBricks.Count == 0)
                     {
-                        hit = false;
-                        break;
+                        gameOver = true;
+                    }
+
+
+                }
+                else if (ball.NewBall)
+                {
+                    if (state.IsKeyDown(Keys.Space))
+                    {
+                        ball.NewBall = false;
                     }
                 }
+
             }
-            else if(ball.NewBall)
+
+            else
             {
-                if (state.IsKeyDown(Keys.Space))
+                if (player.Lives > 0)
                 {
-                    numOfLives--;
+                    gameMessage = "You WIN!";
+                }
+
+                else
+                {
+                    gameMessage = "You LOSE";
+                }
+
+                gameFontSize = endGameFont.MeasureString(gameMessage);
+                //You lose
+                //GraphicsDevice.Clear(Color.Black);  
+                if (state.IsKeyDown(Keys.Enter))
+                {
+                    //gameOver = false;
+
+                    player.Lives = 3;
+                    player.Score = 0;
+                    //ball.NewBall = false;
+                    levelBricks = new List<List<Brick>>();
+                    generateBricks();
+                }
+
+                if(state.IsKeyDown(Keys.Space))
+                {
+                    gameOver = false;
                     ball.NewBall = false;
+
                 }
             }
             base.Update(gameTime);
@@ -188,13 +257,22 @@ namespace BrickBreaker
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             //GraphicsDevice.Viewport.Width - liveSize.
-            spriteBatch.DrawString(font, score, Vector2.Zero, Color.White);
-            spriteBatch.DrawString(font, lives, new Vector2(GraphicsDevice.Viewport.Width - liveSize.X, 0), Color.White);
-            drawBricks();
-            paddle.Draw(spriteBatch);
-            ball.Draw(spriteBatch);
-            //spriteBatch.Draw(pixel, levelBricks[0][0].Hitbox, new Color(Color.Blue, 100));
-            //spriteBatch.Draw(pixel, ball.Hitbox, new Color(Color.Red, 100));
+            if (!gameOver && player.Lives > 0)
+            {
+                spriteBatch.DrawString(font, score, Vector2.Zero, Color.White);
+                spriteBatch.DrawString(font, lives, new Vector2(GraphicsDevice.Viewport.Width - liveSize.X, 0), Color.White);
+                drawBricks();
+                paddle.Draw(spriteBatch);
+                ball.Draw(spriteBatch);
+                //spriteBatch.Draw(pixel, levelBricks[0][0].Hitbox, new Color(Color.Blue, 100));
+                //spriteBatch.Draw(pixel, ball.Hitbox, new Color(Color.Red, 100));
+            }
+
+            else
+            {
+                Vector2 location = new Vector2(GraphicsDevice.Viewport.Width / 2 - gameFontSize.X / 2, GraphicsDevice.Viewport.Height / 2 - gameFontSize.Y / 2);
+                spriteBatch.DrawString(endGameFont, gameMessage, location, Color.White);
+            }
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -205,6 +283,7 @@ namespace BrickBreaker
             Color tint = Color.White;
             for (int level = 0; level < 3; level++)
             {
+                List<Brick> bricks = new List<Brick>();
                 image = Content.Load<Texture2D>(brickColor[level]);
                 for (int i = 2; i < GraphicsDevice.Viewport.Width; i += (int)imageX + 4)
                 {
@@ -222,11 +301,13 @@ namespace BrickBreaker
 
         public void drawBricks()
         {
-            for (int i = 0; i < bricks.Count; i++)
+            for(int i = 0; i < levelBricks.Count; i++)
             {
-                bricks[i].Scale = new Vector2(0.2f);
-                bricks[i].Draw(spriteBatch);
-
+                for(int j = 0; j < levelBricks[i].Count; j++)
+                {
+                    levelBricks[i][j].Scale = new Vector2(0.2f);
+                    levelBricks[i][j].Draw(spriteBatch);
+                }
             }
         }
     }

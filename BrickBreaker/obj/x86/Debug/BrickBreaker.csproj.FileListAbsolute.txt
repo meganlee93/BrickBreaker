@@ -93,3 +93,4 @@ C:\Users\VisitorRL8\Documents\Visual Studio 2017\Projects\BrickBreaker\BrickBrea
 \\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\obj\x86\Debug\BrickBreaker.pdb
 \\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\yBrick.xnb
 \\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\SpriteFont1.xnb
+\\GMRDC1\Folder Redirection\megan.lee\Documents\GitHub\BrickBreaker\BrickBreaker\bin\Windows\x86\Debug\Content\gameFont.xnb

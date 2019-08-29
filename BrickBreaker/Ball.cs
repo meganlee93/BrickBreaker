@@ -21,7 +21,7 @@ namespace BrickBreaker
 
         }
 
-        public void Update(int width, int height, Paddle paddle)
+        public void Update(int width, int height, Paddle paddle, Player player)
         {
             Position.X += xSpeed;
             Position.Y += ySpeed;
@@ -37,11 +37,19 @@ namespace BrickBreaker
                 xSpeed = -Math.Abs(xSpeed);
             }
 
-            if(Position.Y + (Image.Height * Scale.Y) > paddle.Position.Y && 
-                Position.X + (Image.Width * Scale.X) < paddle.Position.X + (paddle.Image.Width * paddle.Scale.X)
-                && Position.X > paddle.Position.X)
+
+
+            //if (Position.Y + (Image.Height * Scale.Y) > paddle.Position.Y && 
+            //    Position.X + (Image.Width * Scale.X) < paddle.Position.X + (paddle.Image.Width * paddle.Scale.X)
+            //    && Position.X > paddle.Position.X)
+            if(Hitbox.Intersects(paddle.Hitbox))
             {
                 ySpeed = -Math.Abs(ySpeed);
+            }
+
+            if(Position.Y < 0)
+            {
+                ySpeed = Math.Abs(ySpeed);
             }
 
             if(Position.Y + (Image.Height * Scale.Y) > height)
@@ -51,6 +59,8 @@ namespace BrickBreaker
                 Position.X = width / 2 - (Image.Width / 2 * Scale.X);
                 Position.Y = height / 2 - (Image.Height / 2 * Scale.Y);
                 NewBall = true;
+                player.Lives--;
+
             }
         }
 
@@ -66,6 +76,15 @@ namespace BrickBreaker
                 if (ySpeed == Math.Abs(ySpeed))
                 {
                     ySpeed = -Math.Abs(ySpeed);
+                    if(xSpeed == Math.Abs(xSpeed))
+                    {
+                        xSpeed = -Math.Abs(xSpeed);
+                    }
+
+                    else
+                    {
+                        xSpeed = Math.Abs(xSpeed);
+                    }
                 }
 
                 else
