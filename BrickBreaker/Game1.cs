@@ -48,7 +48,7 @@ namespace BrickBreaker
         string gameMessage;
         Vector2 gameFontSize;
 
-
+        bool checkPressed;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -89,7 +89,6 @@ namespace BrickBreaker
             image = Content.Load<Texture2D>(brickColor[0]);
             imageX = image.Width * 0.2f;
             imageY = image.Height * 0.2f;
-            //bricks = new List<Brick>();
             levelBricks = new List<List<Brick>>();
 
 
@@ -126,6 +125,8 @@ namespace BrickBreaker
             endGameFont = Content.Load<SpriteFont>("gameFont");
             gameMessage = "";
             generateBricks();
+
+            checkPressed = false;
         }
 
         /// <summary>
@@ -150,7 +151,7 @@ namespace BrickBreaker
             // TODO: Add your update logic here
             state = Keyboard.GetState();
             score = "Score: " + player.Score;
-            //score = "Count:" + levelBricks.Count;
+
             fontSize = font.MeasureString(score);
 
             lives = "Lives: " + player.Lives;
@@ -172,8 +173,6 @@ namespace BrickBreaker
                                 player.Score++;
                                 break;
                             }
-
-                            //score = "Count: " + levelBricks.Count + "Smaller: " + levelBricks[i].Count;
                         }
 
                         if (levelBricks[i].Count == 0)
@@ -215,6 +214,7 @@ namespace BrickBreaker
                 if (player.Lives > 0)
                 {
                     gameMessage = "You WIN!";
+                    
                 }
 
                 else
@@ -224,23 +224,15 @@ namespace BrickBreaker
 
                 gameFontSize = endGameFont.MeasureString(gameMessage);
                 //You lose
-                //GraphicsDevice.Clear(Color.Black);  
                 if (state.IsKeyDown(Keys.Enter))
                 {
-                    //gameOver = false;
-
+                    ball.NewBall = true;
                     player.Lives = 3;
                     player.Score = 0;
-                    //ball.NewBall = false;
-                    levelBricks = new List<List<Brick>>();
-                    generateBricks();
-                }
-
-                if(state.IsKeyDown(Keys.Space))
-                {
                     gameOver = false;
-                    ball.NewBall = false;
-
+                    levelBricks = new List<List<Brick>>();
+                    ball.ResetPosition(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, paddle);
+                    generateBricks();
                 }
             }
             base.Update(gameTime);
@@ -281,7 +273,7 @@ namespace BrickBreaker
         {
             float heightLevel = fontSize.Y + 10;
             Color tint = Color.White;
-            for (int level = 0; level < 3; level++)
+            for (int level = 0; level < 1; level++)
             {
                 List<Brick> bricks = new List<Brick>();
                 image = Content.Load<Texture2D>(brickColor[level]);

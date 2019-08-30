@@ -30,7 +30,6 @@ namespace BrickBreaker
             Image = image;
             Position = position;
             Tint = tint;
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
